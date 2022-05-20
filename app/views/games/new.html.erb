@@ -1,0 +1,21 @@
+<h1>******** Welcome to the longest word-game ********</h1>
+<h2>Here is your grid: </h2>
+<ul>
+<% @letters.each do |letter| %>
+  <li><%= letter %></li>
+</ul>
+<% end %>
+<h2>What's the longest word you can find?</h2>
+  <form action="/score">
+    <input type="text" name="word">
+    <input type="submit"value="Play!">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :letters, @letters %>
+  </form>
+<h1>**************************************************</h1>
+
+<%# HACER POSTEO A LA API DEL DICCIONARIO DE LEWAGON %>
+<%# ESE REQUEST DEVUELVE UN JSON? %>
+<%# CÓMO VEO ESA INFO? %>
+<%# HACER UNA COMPARATIVA ENTRE EL SUBMIT DEL USUARIO Y EL DICCIONARIO %>
+<%# CÓMO SABER QUE LA PALABRA SÍ EXISTE PERO NO ES EN INGLÉS? %>

@@ -1,0 +1,9 @@
+<h1>Games#score</h1>
+<h2>Your word: <%= params[:word] %> </h2>
+<%= @found_word %>
+<% if @found_word %>
+<h2>Felicidades, ganaste!</h2>
+<% else %>
+<h2>Perdiste</h2>
+<% end %>
+<p>Find me in app/views/games/score.html.erb</p>
